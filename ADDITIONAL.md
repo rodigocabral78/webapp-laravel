@@ -67,8 +67,8 @@ composer require symfony/filesystem
 
 touch database/database.sqlite
 DB_CONNECTION=sqlite
-DB_DATABASE=/database/database.sqlite
 DB_FOREIGN_KEYS=true
+DB_DATABASE=/database/database.sqlite
 
 composer require doctrine/dbal
 
@@ -101,7 +101,9 @@ DB_HOST=docker ./artisan migrate:rollback -vvv && DB_HOST=docker ./artisan migra
 ```bash
 composer require kitloong/laravel-migrations-generator --dev
 ```
+
 ## Laravel UI
+
 ```bash
 composer require laravel/ui
 
