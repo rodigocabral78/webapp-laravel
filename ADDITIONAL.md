@@ -73,6 +73,7 @@ DB_DATABASE=/database/database.sqlite
 composer require doctrine/dbal
 
 DB_HOST=docker ./artisan migrate:fresh -vvv --force --seed
+./artisan migrate:fresh -vvv --force --seed --path=database/migrate-sgcfg
 
 ./artisan migrate:fresh -vvv --force --seed
 ./artisan migrate:fresh -vvv --drop-views --force --seed
@@ -100,6 +101,8 @@ DB_HOST=docker ./artisan migrate:rollback -vvv && DB_HOST=docker ./artisan migra
 
 ```bash
 composer require kitloong/laravel-migrations-generator --dev
+
+./artisan migrate:generate -vvv --ansi --defaultFKNames --defaultIndexNames --useDBCollation --path=database/migrate-sgcfg
 ```
 
 ## Laravel UI
